@@ -1,109 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hoshi Social Media</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-
-body {
-  height: 100vh;
-  overflow: hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background: radial-gradient(circle, #000428, #004e92);
-  color:white;
-}
-
-/* Bintang jatuh */
-.star {
-  position:fixed;
-  width:3px;
-  height:80px;
-  background:white;
-  opacity:0.7;
-  transform:rotate(-45deg);
-  animation: fall 1.2s linear infinite;
-}
-
-@keyframes fall {
-  0% { transform:translateY(-100vh) translateX(0) rotate(-45deg); opacity:1;}
-  100%{ transform:translateY(100vh) translateX(200px) rotate(-45deg); opacity:0;}
-}
-
-.container { z-index:5; }
-
-/* Foto profil */
-.avatar img {
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid white;
-  margin-bottom:15px;
-}
-
-h1 { font-size:28px; margin-bottom:12px;}
-
-.social a {
-  display:block;
-  margin:8px 0;
-  padding:12px;
-  width:260px;
-  border-radius:12px;
-  font-size:18px;
-  text-decoration:none;
-  color:white;
-  background:rgba(255,255,255,0.1);
-  backdrop-filter: blur(6px);
-  border:1px solid rgba(255,255,255,0.3);
-  transition:0.3s;
-}
-
-.social a:hover {
-  background:white;
-  color:black;
-}
-
-.social i { margin-right:8px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoshi Social Media</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #1e1e28, #000);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            width: 90%;
+            max-width: 550px;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.4);
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 26px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 14px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.25s;
+        }
+        .btn:hover {
+            background: rgba(255,255,255,0.18);
+        }
+        .icon-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <<img class="profile-pic" src="IMG_20251205_211739_217.webp" alt="Profile">
 
-<script>
-function createStar(){
-    const star=document.createElement("div");
-    star.classList.add("star");
-    star.style.left=Math.random()*window.innerWidth+"px";
-    document.body.appendChild(star);
-    setTimeout(()=>{star.remove();},1200);
-}
-setInterval(createStar, 120); 
-</script>
-
-<div class="container">
-
-  <!-- FOTO PP -->
-  <div class="avatar">
-    <img src="IMG_20251205_211739_217.webp" alt="Hoshi Profile">
-  </div>
-
-  <h1>Hoshi Social Media</h1>
-
-  <div class="social">
-    <a href="https://www.instagram.com/hoshihereed" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
-    <a href="https://www.tiktok.com/@hoshihere" target="_blank"><i class="fa-brands fa-tiktok"></i>TikTok</a>
-    <a href="https://discord.com/users/hoshihereee" target="_blank"><i class="fa-brands fa-discord"></i>Discord</a>
-  </div>
-
-</div>
-
+        <a class="btn" href="https://www.instagram.com/hoshihereed?igsh=MWtqZThnZTEwcG1rYQ==">
+            <img class="icon-img" src="https://i.ibb.co/YTNjrtS/instagram.jpg" alt="ig"> Instagram
+        </a>
+        <a class="btn" href="https://www.tiktok.com/@hoshihere">
+            <img class="icon-img" src="https://i.ibb.co/X7YZc2v/tiktok.jpg" alt="tt"> TikTok
+        </a>
+        <a class="btn" href="https://discord.com/users/hoshihereee">
+            <img class="icon-img" src="https://i.ibb.co/mXJtMZc/discord.jpg" alt="dc"> Discord
+        </a>
+    </div>
 </body>
 </html>
