@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,6 +21,7 @@ body {
   color:white;
 }
 
+/* Bintang jatuh */
 .star {
   position:fixed;
   width:3px;
@@ -30,6 +31,7 @@ body {
   transform:rotate(-45deg);
   animation: fall 1.2s linear infinite;
 }
+
 @keyframes fall {
   0% { transform:translateY(-100vh) translateX(0) rotate(-45deg); opacity:1;}
   100%{ transform:translateY(100vh) translateX(200px) rotate(-45deg); opacity:0;}
@@ -37,8 +39,13 @@ body {
 
 .container { z-index:5; }
 
-.avatar {
-  font-size:80px;
+/* Foto profil */
+.avatar img {
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid white;
   margin-bottom:15px;
 }
 
@@ -83,7 +90,10 @@ setInterval(createStar, 120);
 
 <div class="container">
 
-  <div class="avatar"><i class="fa-solid fa-circle-user"></i></div>
+  <!-- FOTO PP -->
+  <div class="avatar">
+    <img src="IMG_20251205_211739_217.webp" alt="Hoshi Profile">
+  </div>
 
   <h1>Hoshi Social Media</h1>
 
@@ -92,6 +102,7 @@ setInterval(createStar, 120);
     <a href="https://www.tiktok.com/@hoshihere" target="_blank"><i class="fa-brands fa-tiktok"></i>TikTok</a>
     <a href="https://discord.com/users/hoshihereee" target="_blank"><i class="fa-brands fa-discord"></i>Discord</a>
   </div>
+
 </div>
 
 </body>
