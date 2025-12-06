@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
 
 body {
   height: 100vh;
@@ -38,11 +38,19 @@ body {
 .container { z-index:5; }
 
 .avatar {
-  font-size:80px;
   margin-bottom:15px;
+  display:inline-block; /* ukuran div sesuai gambar */
 }
 
-h1 { font-size:28px; margin-bottom:12px;}
+.avatar img {
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block; /* hapus spasi bawah default img */
+}
+
+h1 { font-size:28px; margin-bottom:12px; }
 
 .social a {
   display:block;
@@ -84,8 +92,7 @@ setInterval(createStar, 120);
 <div class="container">
 
   <div class="avatar">
-  <img src="images/IMG_20251205_211739_217.jpg" alt="Profile" 
-       style="width:120px; height:120px; border-radius:50%; object-fit:cover;">
+    <img src="images/IMG_20251205_211739_217.jpg" alt="Profile">
   </div>
 
   <h1>Hoshi Social Media</h1>
